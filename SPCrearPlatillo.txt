@@ -1,0 +1,21 @@
+CREATE PROCEDURE CrearPlatillo (
+@Habilitado CHAR(1),
+@Tipo    VARCHAR(50),
+@Nombre  VARCHAR(50),
+@Descripcion VARCHAR(500),
+@Precio INT
+)
+
+AS BEGIN 
+
+
+DECLARE @IdPlatillo INT
+
+INSERT INTO dbo.Platillo(Habilitado, Tipo, Nombre, Descripcion, Precio)
+VALUES(@Habilitado, @Tipo, @Nombre, @Descripcion, @Precio)
+
+DECLARE @CreacionPlatillo NVARCHAR(MAX)
+SET @CreacionPlatillo = 'Creacion de Platillo'
+
+
+END
